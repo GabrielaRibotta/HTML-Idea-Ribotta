@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tempest - Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../multimedia/favicon-32x32.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="../multimedia/logo.png" alt="The Tempest Logo" width="24" height="24">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span>
+                        <i class="fa-solid fa-masks-theater"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <i class="fa-solid fa-diamond"></i>
+                        <span>|</span>
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        <i class="fa-solid fa-diamond"></i>
+                        <span>|</span>
+                        <a class="nav-link" href="./historia.html">Historia</a>
+                        <i class="fa-solid fa-diamond"></i>
+                        <span>|</span>
+                        <a class="nav-link" href="./galeria.html">Galería</a>
+                        <i class="fa-solid fa-diamond"></i>
+                        <span>|</span>
+                        <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <h1>The Tempest</h1>
+            <h2>Balmoral Theater Group</h2>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <div class="formulario">
+                <form>
+                    <div class="row mb-2">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" name="nombre">
+                        <label for="apellido" class="form-label">Apellido:</label>
+                        <input type="text" class="form-control" name="apellido">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="text" class="form-control" placeholder="vos@tuemail.com" name="email">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label">¿Viste alguna de nuestras obras?</label>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input btn-outline-dark" id="radio1" name="optradio" value="option1" checked>
+                                <label class="form-check-label" for="radio1">Si</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input btn-outline-dark" id="radio2" name="optradio" value="option2">
+                                <label class="form-check-label" for="radio2">No</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">¿Tenés experiencia en teatro?</label>
+                            <select class="form-select btn-dark">
+                                <option>Mucha</option>
+                                <option>Un poco</option>
+                                <option>Nada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="mensaje" class="form-label">¿Cómo nos conociste?</label>
+                        <textarea class="form-control" rows="5" id="mensaje" placeholder="¡Contanos!" name="text"></textarea>
+                    </div>
+                    <div class="form-check form-switch">
+                        <label class="form-check-label form-label" for="switch">Recibir noticias de nuestras próximas producciones</label>
+                        <input class="form-check-input btn-dark" type="checkbox" id="switch" name="noticias" value="yes">
+                    </div>
+                    <div class="btn-group">
+                    <button type="reset" class="btn btn-outline-dark">Borrar</button>
+                    <button type="submit" class="btn btn-outline-dark">Enviar</button>
+                        </div>
+                </form>
+            </div><br>
+            <h2>¡Muchas Gracias!</h2>
+        </section>
+    </main>
+    <footer>
+        <footer>
+            <p>© Gabriela Ribotta</p>
+            <div class="redes">
+                <a href="https://www.youtube.com/channel/UCHXBspbnlkdEstZVdx827Xg/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://es-la.facebook.com/balmoralcollegeoficial"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="https://twitter.com/ColegioBalmoral"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/colegio.balmoral/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </body>
+</html>
