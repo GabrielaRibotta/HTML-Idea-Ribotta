@@ -248,7 +248,7 @@ iframe
 
 /* Galería */
 
-.galeria
+.galeria2003
     background-color: $color1
     display: grid
     grid-template-columns: 1fr 1fr
@@ -258,7 +258,7 @@ iframe
         transition: 1s
         width: 100%
 
-.galeria .img:hover
+.galeria2003 .img:hover
     filter: grayscale(75%)
     transition: 1s
 
@@ -309,6 +309,11 @@ iframe
 .item12
     grid-column: 2/3
     grid-row: 6/7
+
+.galeria2004
+    @extend .galeria2003
+    & img:hover
+        filter: sepia(75%)
 
 /* Contacto */
 
@@ -466,7 +471,7 @@ $redesHover: (fa-youtube: #c4302b, fa-facebook-square: #3b5998, fa-twitter: #00a
         & p
             grid-area: texto
 
-    .galeria
+    .galeria2003
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: repeat(4, 1fr)
 
@@ -534,7 +539,7 @@ $redesHover: (fa-youtube: #c4302b, fa-facebook-square: #3b5998, fa-twitter: #00a
         & img
             margin-top: -5rem
 
-    .galeria
+    .galeria2003
         grid-template-columns: repeat(4, 1fr)
         grid-template-rows: repeat(3, 1fr)
         padding: 2rem

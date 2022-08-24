@@ -287,19 +287,19 @@ iframe {
 }
 
 /* Galería */
-.galeria {
+.galeria2003, .galeria2004 {
   background-color: #3b3434;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(6, 1fr);
   gap: 10px;
 }
-.galeria img {
+.galeria2003 img, .galeria2004 img {
   transition: 1s;
   width: 100%;
 }
 
-.galeria .img:hover {
+.galeria2003 .img:hover, .galeria2004 .img:hover {
   filter: grayscale(75%);
   transition: 1s;
 }
@@ -362,6 +362,10 @@ iframe {
 .item12 {
   grid-column: 2/3;
   grid-row: 6/7;
+}
+
+.galeria2004 img:hover {
+  filter: sepia(75%);
 }
 
 /* Contacto */
@@ -562,7 +566,7 @@ footer p {
   .mapa p {
     grid-area: texto;
   }
-  .galeria {
+  .galeria2003, .galeria2004 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -651,7 +655,7 @@ footer p {
   .carousel-item img {
     margin-top: -5rem;
   }
-  .galeria {
+  .galeria2003, .galeria2004 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     padding: 2rem;
