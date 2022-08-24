@@ -151,7 +151,7 @@ main img {
   background-image: url(./multimedia/telon.jpg);
   background-size: cover;
   background-position: center;
-  height: 5rem;
+  height: 6rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -208,13 +208,13 @@ article p {
   border-radius: 50%;
   height: 50%;
 }
-.tarjeta p {
-  display: none;
+.tarjeta h3 {
   color: #ffffff;
   text-align: center;
   line-height: 1.5rem;
 }
-.tarjeta h3 {
+.tarjeta p {
+  display: none;
   color: #ffffff;
   text-align: center;
   line-height: 1.5rem;
@@ -262,6 +262,7 @@ iframe {
 
 .accordion-body {
   background-color: #3b3434;
+  border: none;
 }
 
 .accordion-item {
@@ -276,7 +277,7 @@ iframe {
 
 .accordion-button:not(.collapsed) {
   color: #3b3434;
-  background-color: #e7f1ff;
+  background-color: #ffffff;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.13);
 }
 
@@ -464,8 +465,20 @@ footer p {
   font-size: 1.5rem;
 }
 
-.redes i:hover {
-  color: #3b3434;
+.redes i.fa-youtube:hover {
+  color: #c4302b;
+}
+
+.redes i.fa-facebook-square:hover {
+  color: #3b5998;
+}
+
+.redes i.fa-twitter:hover {
+  color: #00acee;
+}
+
+.redes i.fa-instagram:hover {
+  color: #8134af;
 }
 
 /* Responsive */

@@ -12,6 +12,8 @@ $font1: 'Gulzar', serif
     font-family: $font1
     color: $color3
 
+$estilo: (ancho: 80%, centro: center,)
+
 /* Header y Nav */
 
 header
@@ -62,7 +64,7 @@ nav
 .navbar-collapse
     background-color: $color3
     opacity: 90%
-    text-align: center
+    text-align: map-get($estilo, centro)
     height: 100vh
 
 .navbar-nav
@@ -134,7 +136,7 @@ main
     background-image: url(./multimedia/telon.jpg)
     background-size: cover
     background-position: center
-    height: 5rem
+    height: 6rem
     width: 100%
     display: grid
     grid-template-columns: 1fr
@@ -153,7 +155,7 @@ main
         margin-top: 0
 
 h1, h2, h3
-    text-align: center
+    text-align: map-get($estilo, centro)
 h1
     font-size: 2rem
 h2
@@ -171,7 +173,7 @@ article p
 
 .tarjeta
     background-color: $color2
-    width: 80%
+    width: map-get($estilo, ancho)
     margin: auto
     margin-bottom: 2rem
     padding: 1rem
@@ -179,34 +181,29 @@ article p
         margin-bottom: 2rem
         border-radius: 50%
         height: 50%
-    
+    & h3
+        color: $color3
+        text-align: map-get($estilo, centro)
+        line-height: 1.5rem
     & p
         display: none
         color: $color3
-        text-align: center
+        text-align: map-get($estilo, centro)
         line-height: 1.5rem
-    
-    & h3
-        color: $color3
-        text-align: center
-        line-height: 1.5rem
-    
 
 .tarjeta:hover
     background-color: $color3
     transition: 1s
     & h3
         color: $color1
-
     & p
         color: $color1
         display: block
         transition: 1.2s
-    
 
 iframe
     display: block
-    max-width: 80%
+    max-width: map-get($estilo, ancho)
     margin: auto
     margin-top: 2rem
     margin-bottom: 2rem
@@ -220,20 +217,21 @@ iframe
         font-size: 1.5rem
     & p
         color: $color3
-    
     & img
         transition: all 1s
-    
     & img:hover
         filter: grayscale(60%)
         transition: all 1s
 
-.accordion-body
-    background-color: $color1
-
-.accordion-item
+@mixin obras
     background-color: $color1
     border: none
+
+.accordion-body
+    @include obras
+
+.accordion-item
+    @include obras
 
 .accordion-button
     background-color: $color2
@@ -241,18 +239,17 @@ iframe
 
 .accordion-button:not(.collapsed) 
     color: $color1
-    background-color: #e7f1ff
+    background-color: $color3
     box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%)
 
 .accordion-button:focus 
     border-color: $color2
     z-index: auto
 
-
 /* Galería */
 
 .galeria
-    background-color: #3b3434
+    background-color: $color1
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: repeat(6, 1fr)
@@ -313,11 +310,10 @@ iframe
     grid-column: 2/3
     grid-row: 6/7
 
-
 /* Contacto */
 
 .formulario
-    max-width: 80%
+    max-width: map-get($estilo, ancho)
     margin: auto
     padding: 1rem
     font-size: 1rem
@@ -349,7 +345,7 @@ input[type=radio]
 
 input[type=radio]::before
     border: $color1
-    background: #ffffff
+    background: $color3
 
 input[type=radio]:checked
     border: $color3
@@ -368,7 +364,7 @@ input[type=radio]::after
     border-color: $color3
 
 button
-    text-align: center
+    text-align: (map-get($estilo, centro))
     text-transform: uppercase
     background-color: $color1
     color: $color3
@@ -376,7 +372,6 @@ button
 
 .row
     --bs-gutter-x: 0
-
 
 /* Footer */
 
@@ -401,8 +396,12 @@ footer
 .redes i
     margin-right: 0.5rem
     font-size: 1.5rem
-.redes i:hover
-    color: $color1
+
+$redesHover: (fa-youtube: #c4302b, fa-facebook-square: #3b5998, fa-twitter: #00acee, fa-instagram: #8134af)
+
+@each $socmed, $hover in $redesHover
+    .redes i.#{$socmed}:hover
+        color: $hover
 
 /* Responsive */
 
